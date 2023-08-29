@@ -1,0 +1,7 @@
+compiler: rill-beta
+name: Partner-Filtered Dashboards Demo
+
+mock_users: 
+- email: eric.green@rilldata.com
+- email: ericpgreen2@gmail.com
+- email: anon@unknown.com
