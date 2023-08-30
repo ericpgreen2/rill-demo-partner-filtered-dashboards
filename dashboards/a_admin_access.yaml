@@ -59,4 +59,4 @@ available_time_zones:
   - America/Chicago
   - America/New_York
 policy:
-  has_access: "'{{ .user.admin }}' == true"
+  has_access: "{{ .user.admin }}"
