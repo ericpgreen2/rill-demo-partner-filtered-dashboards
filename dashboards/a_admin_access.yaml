@@ -1,6 +1,6 @@
 # Visit https://docs.rilldata.com/reference/project-files to learn more about Rill project files.
 
-title: Domain-level access
+title: Admin-level access
 model: margins_model
 timeseries: __time
 measures:
@@ -59,4 +59,4 @@ available_time_zones:
   - America/Chicago
   - America/New_York
 policy:
-  has_access: "'{{ .user.domain }}' == 'rilldata.com'"
+  has_access: "'{{ .user.admin }}' == true"

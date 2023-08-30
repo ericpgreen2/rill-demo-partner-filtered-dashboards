@@ -3,5 +3,6 @@ name: Partner-Filtered Dashboards Demo
 
 mock_users: 
 - email: eric.green@rilldata.com
+  admin: true
 - email: ericpgreen2@gmail.com
 - email: anon@unknown.com
