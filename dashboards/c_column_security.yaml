@@ -62,6 +62,10 @@ policy:
   has_access: "'{{ .user.domain }}' == 'rilldata.com' || '{{ .user.domain }}' == 'gmail.com'"
   filter: "company IN (SELECT company FROM mapping WHERE email = '{{ .user.email }}' )"
   exclude:
+    - name: company
+      if: "'{{ .user.domain }}' != 'rilldata.com'"
+    - name: plan_name
+      if: "'{{ .user.domain }}' != 'rilldata.com'"
     - name: environment
       if: "'{{ .user.domain }}' != 'rilldata.com'"
     - name: pipeline
