@@ -58,5 +58,5 @@ available_time_zones:
   - America/Los_Angeles
   - America/Chicago
   - America/New_York
-policy:
-  has_access: "{{ .user.admin }}"
+security:
+  access: "{{ .user.admin }}"

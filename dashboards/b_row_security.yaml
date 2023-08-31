@@ -58,6 +58,6 @@ available_time_zones:
   - America/Los_Angeles
   - America/Chicago
   - America/New_York
-policy:
-  has_access: "'{{ .user.domain }}' == 'rilldata.com' || '{{ .user.domain }}' == 'gmail.com'"
-  filter: "company IN (SELECT company FROM mapping WHERE email = '{{ .user.email }}' )"
+security:
+  access: "'{{ .user.domain }}' == 'rilldata.com' OR '{{ .user.domain }}' == 'gmail.com'"
+  row_filter: "company IN (SELECT company FROM mapping WHERE email = '{{ .user.email }}' )"
