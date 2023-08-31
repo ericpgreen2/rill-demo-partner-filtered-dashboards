@@ -62,5 +62,10 @@ security:
   access: "'{{ .user.domain }}' == 'rilldata.com' OR '{{ .user.domain }}' == 'gmail.com'"
   row_filter: "company IN (SELECT company FROM mapping WHERE email = '{{ .user.email }}' )"
   exclude:
-    - names: [company, plan_name, environment, pipeline]
-      if: "'{{ .user.domain }}' != 'rilldata.com'"
+    - if: "'{{ .user.domain }}' != 'rilldata.com'"
+      names:
+        - company
+        - plan_name
+        - environment
+        - pipeline
+      
