@@ -1,4 +1,7 @@
+!data/*
+
+.DS_Store
+
 # Rill
-*.db
-*.db.tmp
-*.db.wal
+.env
+tmp
